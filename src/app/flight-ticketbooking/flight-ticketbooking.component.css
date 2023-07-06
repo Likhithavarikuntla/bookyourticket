@@ -1,0 +1,19 @@
+.back{
+   
+    background-image: url("src/assets/background.webp");
+   background-repeat: no-repeat;
+   margin-left: 80px;
+  
+   
+}
+input{
+    border: 0;
+    outline:0;
+   border-bottom: 4px solid bisque ;
+   width: 200px;
+   
+    
+}
+.class{
+    margin-right: 140px;
+}

@@ -1,0 +1,51 @@
+<br><br><br><br><br><br><br><br><div class="nav">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/user/home"><strong>Home</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user/flight-tickets-booking"><strong>Flight tickets</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/user/train"><strong>Train tickets</strong></a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/user/exotic"><strong>Exoctic</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/user/bookingstatus"><strong>Booking Status</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/user/contact"><strong>Conctact</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="/user/login" (click)="logout()"><strong>Log out <i class="fa fa-sign-out"></i></strong></a>
+          </li>
+      
+          <li class="nav-item">
+            <img src="assets/Capture.PNG" class="img1" height="120" width="200">
+          </li>
+         
+      </ul>
+    </div>
+      
+    </nav>
+    <h1>Hey {{username}} welcome onboard!...</h1>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+
+
+
+  
+  
+    
+  
+ 

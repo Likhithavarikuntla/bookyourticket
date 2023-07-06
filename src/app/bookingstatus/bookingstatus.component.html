@@ -1,0 +1,289 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5" *ngFor="let book of bookings; let i=index">
+            <form action="">
+
+
+                <h1> your ticket {{i+1}}</h1>
+                <div class="form-group">
+                    <div *ngIf="book.isEdit">
+                        <label for="" class="form-label">starting:</label>
+                        <input type="text" name="starting" [(ngModel)]="book.starting" class="form-control">
+                    </div>
+                    <div *ngIf="!book.isEdit">
+                        <label for="" class="form-label">starting:</label>
+                        <input type="text" name="starting" [(ngModel)]="book.starting" class="form-control" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div *ngIf="book.isEdit">
+                        <label for="" class="form-label">
+                            destination:
+                        </label>
+                        <input type="text" name="dest" [(ngModel)]="book.destination" class="form-control">
+                    </div>
+                    <div *ngIf="!book.isEdit">
+                        <label for="" class="form-label">
+                            destination:
+                        </label>
+                        <input type="text" name="dest" [(ngModel)]="book.destination" class="form-control" disabled>
+                    </div>
+                </div>
+
+
+                <br>
+                <div class="form-group">
+                    <div *ngIf="book.isEdit">
+                        <label for="" class="form-label">
+                            Doj
+                        </label>
+                        <input type="text" name="doj" [(ngModel)]="book.doj" class="form-control">
+                    </div>
+                    <div *ngIf="!book.isEdit">
+                        <label for="" class="form-label">
+                            Doj
+                        </label>
+                        <input type="text" name="doj" [(ngModel)]="book.doj" class="form-control" disabled>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <div *ngIf="book.isEdit">
+                        <label for="" class="form-label">
+                            Dor:
+                        </label>
+                        <input type="text" name="dor" [(ngModel)]="book.dor" class="form-control">
+                    </div>
+                    <div *ngIf="!book.isEdit">
+                        <label for="" class="form-label">
+                            Dor:
+                        </label>
+                        <input type="text" name="dor" [(ngModel)]="book.dor" class="form-control">
+                        <br>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div *ngIf="book.isEdit">
+                        <label for="" class="form-label">
+                            passengers:
+                        </label>
+                        <input type="any" name="passcoun" [(ngModel)]="book.passcount" class="form-control">
+                    </div>
+                    <div *ngIf="!book.isEdit">
+                        <label for="" class="form-label">
+                            passengers:
+                        </label>
+                        <input type="any" name="passcoun" [(ngModel)]="book.passcount" class="form-control" disabled>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <div *ngIf="book.isEdit">
+                        <label for="" class="form-label">
+                            class:
+                        </label>
+                        <input type="text" name="seatingclass" [(ngModel)]="book.seatingclass" class="form-control">
+                    </div>
+                    <div *ngIf="!book.isEdit">
+                        <label for="" class="form-label">
+                            class:</label>
+                        <input type="text" name="seatingclass" [(ngModel)]="book.seatingclass" class="form-control"
+                            diabled>
+                    </div>
+                </div>
+                <div *ngIf="!book.isEdit">
+                    <button class="btn btn-warning" (click)="isEditcontent(book)">Edit</button>
+                    <button class="btn btn-danger" (click)="delete(book)">Delete</button>
+                    <button class="btn btn-success" (click)="paymentt(book)">Pay Now</button>
+                </div>
+                <div *ngIf="book.isEdit">
+                    <button class="btn btn-primary" (click)="update(book)">Update</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5" *ngFor="let ticket of tickets; let i=index">
+            <form action="">
+
+
+                <h1> your ticket {{i+1}}</h1>
+                <div class="form-group">
+                    <div *ngIf="ticket.isEdit">
+                        <label for="" class="form-label">starting:</label>
+                        <input type="text" name="starting" [(ngModel)]="ticket.starting" class="form-control">
+                    </div>
+                    <div *ngIf="!ticket.isEdit">
+                        <label for="" class="form-label">starting:</label>
+                        <input type="text" name="starting" [(ngModel)]="ticket.starting" class="form-control" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div *ngIf="ticket.isEdit">
+                        <label for="" class="form-label">
+                            destination:
+                        </label>
+                        <input type="text" name="dest" [(ngModel)]="ticket.destination" class="form-control">
+                    </div>
+                    <div *ngIf="!ticket.isEdit">
+                        <label for="" class="form-label">
+                            destination:
+                        </label>
+                        <input type="text" name="dest" [(ngModel)]="ticket.destination" class="form-control" disabled>
+                    </div>
+                </div>
+
+
+                <br>
+                <div class="form-group">
+                    <div *ngIf="ticket.isEdit">
+                        <label for="" class="form-label">
+                            Doj
+                        </label>
+                        <input type="text" name="doj" [(ngModel)]="ticket.doj" class="form-control">
+                    </div>
+                    <div *ngIf="!ticket.isEdit">
+                        <label for="" class="form-label">
+                            Doj
+                        </label>
+                        <input type="text" name="doj" [(ngModel)]="ticket.doj" class="form-control" disabled>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <div *ngIf="ticket.isEdit">
+                        <label for="" class="form-label">
+                            Dor:
+                        </label>
+                        <input type="text" name="dor" [(ngModel)]="ticket.dor" class="form-control">
+                    </div>
+                    <div *ngIf="!ticket.isEdit">
+                        <label for="" class="form-label">
+                            Dor:
+                        </label>
+                        <input type="text" name="dor" [(ngModel)]="ticket.dor" class="form-control">
+                        <br>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div *ngIf="ticket.isEdit">
+                        <label for="" class="form-label">
+                            passengers:
+                        </label>
+                        <input type="any" name="passcoun" [(ngModel)]="ticket.passcount" class="form-control">
+                    </div>
+                    <div *ngIf="!ticket.isEdit">
+                        <label for="" class="form-label">
+                            passengers:
+                        </label>
+                        <input type="any" name="passcoun" [(ngModel)]="ticket.passcount" class="form-control" disabled>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <div *ngIf="ticket.isEdit">
+                        <label for="" class="form-label">
+                            class:
+                        </label>
+                        <input type="text" name="seatingclass" [(ngModel)]="ticket.seatingclass" class="form-control">
+                    </div>
+                    <div *ngIf="!ticket.isEdit">
+                        <label for="" class="form-label">
+                            class:</label>
+                        <input type="text" name="seatingclass" [(ngModel)]="ticket.seatingclass" class="form-control"
+                            diabled>
+                    </div>
+                </div>
+                <div *ngIf="!ticket.isEdit">
+                    <button class="btn btn-warning" (click)="isEdit(ticket)">Edit</button>
+                    <button class="btn btn-danger" (click)="deletee(ticket)">Delete</button>
+                    <button class="btn btn-success" (click)="payment(ticket)">Pay Now</button>
+                </div>
+                <div *ngIf="ticket.isEdit">
+                    <button class="btn btn-primary" (click)="updatee(ticket)">Update</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5" *ngFor="let exo of exoctic ; let i=index">
+            <form action="">
+
+
+                <h1> your ticket {{i+1}}</h1>
+                <div class="form-group">
+                    <div *ngIf="exo.isEdit">
+                        <label for="" class="form-label">starting:</label>
+                        <input type="text" name="starting" [(ngModel)]="exo.starting" class="form-control">
+                    </div>
+                    <div *ngIf="!exo.isEdit">
+                        <label for="" class="form-label">starting:</label>
+                        <input type="text" name="starting" [(ngModel)]="exo.starting" class="form-control" disabled>
+                    </div>
+                </div>
+
+
+
+                <br>
+
+
+                <div class="form-group">
+                    <div *ngIf="exo.isEdit">
+                        <label for="" class="form-label">
+                            passengers:
+                        </label>
+                        <input type="any" name="passcoun" [(ngModel)]="exo.passcount" class="form-control">
+                    </div>
+                    <div *ngIf="!exo.isEdit">
+                        <label for="" class="form-label">
+                            passengers:
+                        </label>
+                        <input type="any" name="passcount" [(ngModel)]="exo.passcount" class="form-control" disabled>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <div *ngIf="exo.isEdit">
+                        <label for="" class="form-label">
+                            class:
+                        </label>
+                        <input type="text" name="seatingclass" [(ngModel)]="exo.seatingclass" class="form-control">
+                    </div>
+                    <div *ngIf="!exo.isEdit">
+                        <label for="" class="form-label">
+                            class:</label>
+                        <input type="text" name="seatingclass" [(ngModel)]="exo.seatingclass" class="form-control"
+                            diabled>
+                    </div>
+                </div>
+                <div *ngIf="!exo.isEdit">
+                    <button class="btn btn-warning" (click)="isEditcont(exo)">Edit</button>
+                    <button class="btn btn-danger" (click)="delet(exo)">Delete</button>
+                    <button class="btn btn-success" (click)="paymen(exo)">Pay Now</button>
+                </div>
+                <div *ngIf="exo.isEdit">
+                    <button class="btn btn-primary" (click)="updat(exo)">Update</button>
+                </div>
+
+            </form>
+        </div>

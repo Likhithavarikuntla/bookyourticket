@@ -1,0 +1,22 @@
+.container-fluid{
+   background-repeat: no-repeat;
+   height:625px;
+   width:1352px;
+    background-image:url("https://img.freepik.com/free-vector/watercolor-adventure-background_52683-83928.jpg");
+    background-size: 1352px;
+    position: absolute;
+    top:0px;
+   
+}
+input{
+    width: 350px;
+}
+label{
+    color:black;
+}
+.col-md-12{
+    display: flex;
+    justify-content: center;
+    position:absolute;
+    top:200px;
+}

@@ -1,0 +1,22 @@
+.container-fluid{
+   
+    background-image: url("https://images.pexels.com/photos/1658967/pexels-photo-1658967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+   background-repeat: no-repeat;
+   background-size: 1500px;  
+   width: 1200px;
+}
+input{
+    border: 0;
+    outline:0;
+   border-bottom: 4px solid bisque ;
+   width: 200px;
+   
+    
+}
+.class{
+    margin-right: 140px;
+}
+.img{
+   
+margin-left:250px;
+}

@@ -1,0 +1,53 @@
+<div class="container-fluid  ">
+    <div class="row ">
+        <div class="col-md-6">
+            <br>
+            <br>
+            <h3>TRAIN</h3>
+            <h3>Booking</h3>
+            <br> <br>
+            <p>EXPERIENCE THE MOST<br> HASSLE FREE FLIGHT <br>BOOKING AND GET GREAT DEALS <br>WITH REASONABLE RATES</p>
+            <br> <br>
+            <h4>Great Deals</h4>
+            <h4>And Great Offers</h4>
+            <br> <br>
+
+            <h5>with reasonable rates in top airlince<br>
+                and destinations</h5>
+        </div>
+        
+        <div class="col-md-3 mt-5  ">
+            <div class="form-group class">
+                <label class="form-label">From</label>
+
+                <input class="form-control" [(ngModel)]="starting"  placeholder="starting point"><i class="fa-solid fa-location-dot"></i>
+                <label class="form-label">Departure</label>
+                <input class="form-control" [(ngModel)]="doj" type="datetime-local">
+                <label class="form-label">passengers</label>
+                <input class="form-control"  placeholder="2 adult+1 child" [(ngModel)]="passcount">
+                
+            </div> </div>
+
+
+            <div class="col-md-3 mt-5">
+                <div class="form-group ">
+                    <label class="form-label">to</label>
+
+                    <input class="form-control" [(ngModel)]="destination" placeholder="destination"><i class="fa-solid fa-location-dot"></i>
+                    <label class="form-label">Return</label>
+                    <input class="form-control" [(ngModel)]="dor" type="datetime-local">
+                    <label class="form-label">class</label>
+                    <input class="form-control"  [(ngModel)]="seatingclass">
+                    <button class="" (click)="booknow()">Book Now</button>
+                    <button class="">CANCEL</button>
+
+
+                </div>
+            </div>
+            
+
+
+
+
+    </div>
+</div>
